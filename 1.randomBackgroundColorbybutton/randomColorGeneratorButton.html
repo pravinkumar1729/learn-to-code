@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Color Generator</title>
+</head>
+<body>
+	<button type="button" id="button-id">Click Me</button>
+
+	<script type="text/javascript">
+
+		const randomColors = () => {
+
+			//this is an array of colors
+			let arrColors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple'];
+
+			//used to create a random number between 0 and the length of array
+			let randomNumber = parseInt(Math.random() * arrColors.length);
+			//selects the body of document
+			let body = document.querySelector('body');
+
+			//styles the background of body
+			body.style.backgroundColor = arrColors[randomNumber];
+		}
+		
+
+		document.querySelector('#button-id').addEventListener('click', randomColors);
+
+	</script>
+</body>
+</html>
